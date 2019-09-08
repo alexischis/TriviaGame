@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <title>Bugz Trivia</title>
-    <link rel="stylesheet" type="text/css" href="assets\css\reset.css">
     <link rel="stylesheet" type="text/css" href="assets\css\style.css">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Luckiest+Guy&display=swap" rel="stylesheet">
     </head>
@@ -16,29 +15,71 @@
             <div id="game-title">
             <b>Bugz Trivia</b>
             </div>
-            <button>Start</button>
-        <div id="game start">
+            <button id ="start">Start</button>
+        <div id="game-start">
             <div id="timer">00:30</div>
             <div id="questions">
                 1. During peak production, how many eggs can a Queen Bee lay per year?
-                <div id="options1"></div>
+                <form id ="options1">
+                    <input type="radio" name="choice" value="Fifteen Hundred"> 1,500
+                    <input type="radio" name="choice" value="Seven Hundred"> 700
+                    <input type="radio" name="choice" value="Three Hundred"> 300
+                    <input type="radio" name="choice" value="Twenty Hundred"> 2,000
+                </form>
                 2. What insect was responsible for transmitting the Bubonic Plague?
-                <div id="options2"></div>
+                <form id="options2">
+                        <input type="radio" name="choice" value="Rat Flea"> Rat Flea
+                        <input type="radio" name="choice" value="Mosquito"> Mosquito
+                        <input type="radio" name="choice" value="Pigeon"> Pigeon
+                        <input type="radio" name="choice" value="House Fly"> House Fly
+                </form>
                 3. What is the loudest insect?
-                <div id="options3"></div>
-                4. The Tropical Stick insect is the longest insect. How long was insect?
-                <div id="options4"></div>
-                5. What is a flea expert called?
-                <div id="options5"></div>
+                <form id="options3">
+                        <input type="radio" name="choice" value="Cicada"> Cicada
+                        <input type="radio" name="choice" value="House Fly"> House Fly
+                        <input type="radio" name="choice" value="Bumble Bee"> Bumble Bee
+                        <input type="radio" name="choice" value="Crickets"> Crickets
+                </form>
+                4. The Tropical Stick insect is the longest insect. How long was the Tropical Stick?
+                <form id="options4">
+                        <input type="radio" name="choice" value="Fourteen Inches"> 14 in
+                        <input type="radio" name="choice" value="Three Feet"> 3 ft
+                        <input type="radio" name="choice" value="Three Hundred and Thirty Five Centimeters"> 335 cm
+                        <input type="radio" name="choice" value="Two Feet"> 2 ft
+                </form>
+                5. What is a Flea expert called?
+                <form id="options5">
+                        <input type="radio" name="choice" value="Pullicologist"> Pullicologist
+                        <input type="radio" name="choice" value="Phlebotomist"> Phlebotomist
+                        <input type="radio" name="choice" value="Exterminator"> Exterminator
+                        <input type="radio" name="choice" value="Ecologist"> Ecologist
+                </form>
                 6. Who bought the European Honey Bee to the US?
-                <div id="options6"></div>
-                7. The world's largest roach is six inches long. Which continent does it reside on?
-                <div id="options7"></div>
+                <form id="options6">
+                        <input type="radio" name="choice" value="White Colonists"> White Colonists
+                        <input type="radio" name="choice" value="Native Americans"> Native Americans
+                        <input type="radio" name="choice" value="Spanish Conqistadors"> Spanish Conqistadors
+                        <input type="radio" name="choice" value="French Explorers"> French Explorers     
+                </form>
+                7. The world's largest Roach is six inches long. Which continent does it reside on?
+                <div id="options7">
+                        <input type="radio" name="choice" value="South America"> South America
+                        <input type="radio" name="choice" value="Australia"> Australia
+                        <input type="radio" name="choice" value="Africa"> Africa
+                        <input type="radio" name="choice" value="North America"> North America
+                </form>
                 8. What is the lifespan of a Dragonfly?
-                <div id="options8"></div>
+                <form id="options8">
+                        <input type="radio" name="choice" value="Twentyfour Hours"> 24 hours
+                        <input type="radio" name="choice" value="Twelve Days"> 12 days
+                        <input type="radio" name="choice" value="Seventytwo hours"> 72 hours
+                        <input type="radio" name="choice" value="Nine Days"> 9 days
+                </form>
             </div>
         </div>
-    
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets\javascript\app.js"></script>
+
     </body>
 
     <div class="view" style="background-image: url('https://bluedozendesign.com/wp-content/uploads/2013/10/bugs.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
