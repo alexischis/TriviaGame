@@ -17,7 +17,7 @@
             </div>
             <button id ="start">Start</button>
         <div id="game-start">
-            <div id="timer">00:30</div>
+            <div id="timer"></div>
             <div id="questions">
                 1. During peak production, how many eggs can a Queen Bee lay per year?
                 <form id ="options1">
@@ -62,7 +62,7 @@
                         <input type="radio" name="choice" value="French Explorers"> French Explorers     
                 </form>
                 7. The world's largest Roach is six inches long. Which continent does it reside on?
-                <div id="options7">
+                <form id="options7">
                         <input type="radio" name="choice" value="South America"> South America
                         <input type="radio" name="choice" value="Australia"> Australia
                         <input type="radio" name="choice" value="Africa"> Africa
@@ -76,6 +76,10 @@
                         <input type="radio" name="choice" value="Nine Days"> 9 days
                 </form>
             </div>
+        <div id = "score">
+            <div id="answered"></div>
+            <div id="unanswered"></div>
+        </div>
         </div>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="assets\javascript\app.js"></script>

@@ -2,18 +2,34 @@ $(document).ready(function(){
 
 $('#game-start').css("display", "none");
 
-var timer = ["00:30"];
-var correct = [0];
-var incorrect = [0];
-var unanswered = [0];
+var timeLeft = 30;
+// var elem = document.getElementById('#timer');
+var timerId = setInterval(countdown, 1000);
+var correct = 0;
+var incorrect = 0;
+var unanswered = 0;
+
 
 
 
 $('#start').click(function(){
     $('#game-start').css("display", "block")
     $('#start').css("display", "none");
-});
-    // when the start button is clicked you can see the questions
+}); 
+function countdown() {
+      if (timeLeft == -1) {
+        clearTimeout(timerId);
+        $('#game-start').css("display", "none");
+        $('#score').css("display", "block");
+        $('#correct').html('Answers Correct: ' + correct);
+        $('#incorrect').html('Answers Incorrect: ' + incorrect);
+      } else {
+        $('#timer').html(timeLeft + 'seconds remaining');
+        timeLeft--;
+      }
+    };
+
+ // when the start button is clicked you can see the questions
 
 // 1. During peak production, how many eggs can a Queen Bee lay per year?
 var option1 = ["1,500", "700", "300", "2,000"];
@@ -67,6 +83,26 @@ var option8 = ["24 hours", "12 days", "72 hours", "9 days"];
 var answer8 = option8[0];
 console.log(answer8);
 // $("#options8").text(JSON.stringify(option8));
+
+var checkAnswers = function() {
+
+    var radios = document.getElementsByName('choice');
+    var val= "";
+    for (var i = 0, length = radios.length; i < length; i++) {
+        if (radios[i].checked) {
+           val = radios[i].value; 
+           break;
+         }
+    }
+    
+    if (val == "" ) {
+     correct ++;
+     } else {
+         incorrect ++;
+     }
+  };
+
+  
 
 
 
