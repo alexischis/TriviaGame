@@ -41,34 +41,26 @@ function countdown() {
       }
     };
 
-   
-function answered() {
-  for (var i = 0, length = radios.length; i < length; i++) {
-      if (radios[i].checked) {
-         var val = radios[i].value; 
-         console.log(val);
-         validate();
-         break;
-      } else {
-        // $('#unanswered').html("Unanswered: " + unanswered);
-        unanswered ++;
-        console.log(unanswered);  
-      }
-      
-       };
-      };
-
-    function validate() {
-    for (var i = 0, length = radios.length; i < length; i++) {
-    if (radios[i].checked === correctAnswer) {
-      $('#correct').html("Correct: " + correct);
-      correct ++;
-    } else {
-    $('#incorrect').html("Incorrect: " + incorrect);
+function userRight () {
+  if ('input [name="q1"]:checked' === correctAnswer) {
+    correct ++;
+    $("#correct").html("Correct:" + correct);
+  } else {
     incorrect ++;
-    }
-    }
-    };  
+    $("#incorrect").html("Incorrect: " + incorrect);
+  }
+};
+
+function answered () {
+  if ('input[name="q1"]:checked') {
+    answered ++;
+    console.log("Answered: " + answered);
+    userRight();
+  } else {
+    unanswered ++;
+    $('#unanswered').html("Unanswered: " + unanswered);
+  }
+};
                 
 
  // when the start button is clicked you can see the questions
