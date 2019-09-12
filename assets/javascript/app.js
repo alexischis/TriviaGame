@@ -1,30 +1,93 @@
-$(document).ready(function(){
+var timerId;
 
 $('#game-start').css("display", "none");
 $('#score').css("display", "none");
 
+$(document).ready(function(){
+
+
+
 var timeLeft = 30;
 // var elem = document.getElementById('#timer');
-var timerId = setInterval(countdown, 1000);
 var correct = 0;
 $("#correct").text("Correct: " + correct);
 var incorrect = 0;
 $("#incorrect").text("Inorrect: " + incorrect);
+var answered = 0;
 var unanswered = 0;
-$("#unanswered").text("Unanswered: " + unanswered);
 var radios = $('input[type=radios]');
 var correctAnswer =$('.correctChoice');
 // var answered = $('.options');
-
-
-
 
 $('#start').click(function(){
     $('#game-start').css("display", "block")
     $('#start').css("display", "none");
     $('#score').css("display", "none");
+    timerId = setInterval(countdown, 1000);
     // countdown();
 }); 
+
+
+
+function answered() {
+  var q1Ans = $('input[name="q1"]:checked').val();
+  console.log(q1Ans)
+  if ('input[name="q1"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  var q2Ans = $('input[name="q2"]:checked').val();
+  console.log(q2Ans)
+  if ('input[name="q2"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  var q3Ans = $('input[name="q3"]:checked').val();
+  console.log(q3Ans)
+  if ('input[name="q3"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  var q4Ans = $('input[name="q4"]:checked').val();
+  console.log(q4Ans)
+  if ('input[name="q4"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  var q5Ans = $('input[name="q5"]:checked').val();
+  console.log(q5Ans)
+  if ('input[name="q5"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  var q6Ans = $('input[name="q6"]:checked').val();
+  console.log(q6Ans)
+  if ('input[name="q6"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  var q7Ans = $('input[name="q7"]:checked').val();
+  console.log(q7Ans)
+  if ('input[name="q7"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  var q8Ans = $('input[name="q8"]:checked').val();
+  console.log(q8Ans)
+  if ('input[name="q8"]:checked') {
+    answered ++;
+  } else {
+    unanswered ++;
+  }
+  $('#unanswered').html("Unanswered: " + unanswered);
+};
 
 
 
@@ -41,26 +104,17 @@ function countdown() {
       }
     };
 
-function userRight () {
-  if ('input [name="q1"]:checked' === correctAnswer) {
-    correct ++;
-    $("#correct").html("Correct:" + correct);
-  } else {
-    incorrect ++;
-    $("#incorrect").html("Incorrect: " + incorrect);
-  }
-};
+// function userRight () {
+//   if ('input [name="q1"]:checked' === correctAnswer) {
+//     correct ++;
+//     $("#correct").html("Correct:" + correct);
+//   } else {
+//     ('input [name="q1"]:checked' !== correctAnswer) 
+//     incorrect ++;
+//     $("#incorrect").html("Incorrect: " + incorrect);
+// }
+// };
 
-function answered () {
-  if ('input[name="q1"]:checked') {
-    answered ++;
-    console.log("Answered: " + answered);
-    userRight();
-  } else {
-    unanswered ++;
-    $('#unanswered').html("Unanswered: " + unanswered);
-  }
-};
                 
 
  // when the start button is clicked you can see the questions
